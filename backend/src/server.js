@@ -1,17 +1,20 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const venueRoutes = require("./reoutes/venueRoutes");
+app.use("/api/venues", venueRoutes);
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // Test route
-app.get('/api/health', (req, res) => {
-  res.json({ ok: true, message: 'Server is running.' });
+app.get("/api/health", (req, res) => {
+  res.json({ ok: true, message: "Server is running." });
 });
 
 // Start server
