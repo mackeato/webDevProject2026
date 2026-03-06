@@ -1,6 +1,15 @@
-exports.getAllVenuew = (req, res) => {
-  res.json([
-    { id: 1, name: "Fake venue", type: "bar" },
-    { id: 2, name: "Another fake", type: "restaurant" },
-  ]);
+const fs = require("fs");
+const path = require("path");
+
+const dataPath = path.join(__dirname, "../../stores.json");
+
+const getVenues = (req, res) => {
+  const data = fs.readFileSync(dataPath);
+  const venues = JSON.parse(data);
+
+  res.json(venues);
+};
+
+module.exports = {
+  getVenues,
 };
