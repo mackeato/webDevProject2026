@@ -1,9 +1,13 @@
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Serve frontend files
+app.use(express.static(path.join(__dirname, "../../public")));
 
 const venueRoutes = require("./routes/venueRoutes");
 app.use("/api/venues", venueRoutes);
