@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const venueController = require("../controllers/venueController");
 
-router.get("/", venueController.getAllVenues);
+const {
+  getVenues
+} = require("../controllers/venuesController");
+
+router.get("/", getVenues);
 
 module.exports = router;
