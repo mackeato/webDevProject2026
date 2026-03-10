@@ -1,12 +1,3 @@
-/* =========================================
-   JKPG City-inspired UI (minimal / bold type)
-   - Big black headings
-   - White space
-   - Thin borders, subtle hover
-   - Seasonal pastel highlight blocks
-========================================= */
-
-/* Fonts: pick 1 condensed + 1 readable */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Archivo+Black&display=swap");
 
 :root {
@@ -16,7 +7,6 @@
   --faint: rgba(10, 10, 10, 0.14);
   --line: rgba(10, 10, 10, 0.12);
 
-  /* seasonal-ish accent (winter poster vibe) */
   --season: #a8c4e6; /* light blue */
   --season-2: #f3f3f3; /* soft gray */
 
